@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+<h1>Login to your account</h1>
+<div>
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for f in form %}
+        {{ f.label_tag }}
+        {{ f }}
+            <br>
+            <br>
+        {% endfor %}
+        <a href="{% url "forget" %}"><p>Forget your password?</p></a>
+        <button type="submit"> Send </button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reseat Page</title>
+</head>
+<body>
+<h1>Enter your new password</h1>
+<div>
+    <form action="" method="post">
+    {% csrf_token %}
+        {% for d in data %}
+            {{ d.label_tag }}
+            {{ d }}
+            <br>
+            <br>
+        {% endfor %}
+        <button type="submit"> Send </button>
+    </form>
+</div>
+</body>
+</html>

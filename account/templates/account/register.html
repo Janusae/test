@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+</head>
+<body>
+<h1>Create your account</h1>
+<div>
+    <form method="post" action="">
+    {% csrf_token %}
+        {% for f in form %}
+        {{ f.label_tag }}
+        {{ f }}
+            <br>
+            <br>
+        {% endfor %}
+        <button type="submit"> Send </button>
+    </form>
+</div>
+</body>
+</html>
